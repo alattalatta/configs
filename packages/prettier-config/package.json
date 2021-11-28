@@ -1,6 +1,6 @@
 {
   "name": "@alattalatta/prettier-config",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A simple Prettier preset.",
   "main": "index.json",
   "license": "MIT",
