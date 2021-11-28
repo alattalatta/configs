@@ -16,9 +16,11 @@
   },
   "devDependencies": {
     "eslint": "^8.3.0",
+    "prettier": "^2.5.0",
     "typescript": "^4.5.2"
   },
   "peerDependencies": {
-    "eslint": ">=8.3"
+    "eslint": "8",
+    "prettier": "2"
   }
 }
