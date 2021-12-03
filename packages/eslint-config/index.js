@@ -150,4 +150,9 @@ module.exports = {
     ],
     "@typescript-eslint/switch-exhaustiveness-check": "error",
   },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    }
+  }
 }

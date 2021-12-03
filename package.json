@@ -1,6 +1,5 @@
 {
   "name": "@alattalatta/configs",
-  "version": "0.2.0",
   "description": "Linter/Prettier configs",
   "main": "index.js",
   "private": true,
