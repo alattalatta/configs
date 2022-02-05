@@ -146,7 +146,10 @@ module.exports = {
     ],
     "@typescript-eslint/prefer-readonly-parameter-types": [
       "warn",
-      { ignoreInferredTypes: true },
+      {
+        checkParameterProperties: false,
+        ignoreInferredTypes: true
+      },
     ],
     "@typescript-eslint/switch-exhaustiveness-check": "error",
   },
