@@ -3,7 +3,6 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:prettier/recommended",
     "plugin:react-hooks/recommended",
   ],
@@ -143,15 +142,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": [
       "warn",
       { argsIgnorePattern: "^_+", ignoreRestSiblings: true },
-    ],
-    "@typescript-eslint/prefer-readonly-parameter-types": [
-      "warn",
-      {
-        checkParameterProperties: false,
-        ignoreInferredTypes: true
-      },
-    ],
-    "@typescript-eslint/switch-exhaustiveness-check": "error",
+    ]
   },
   "settings": {
     "import/parsers": {
