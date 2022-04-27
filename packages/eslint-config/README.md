@@ -7,7 +7,7 @@
 require('@alattalatta/eslint-config/patch')
 
 module.exports = {
-  extends: ['@alattalatta/eslint-config'],
+  extends: ['@alattalatta/eslint-config'], // ['@alattalatta/eslint-config/react']
   parserOptions: {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,

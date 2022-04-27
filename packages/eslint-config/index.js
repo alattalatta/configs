@@ -5,9 +5,8 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     "plugin:prettier/recommended",
-    "plugin:react-hooks/recommended",
   ],
-  plugins: ["import", "react"],
+  plugins: ["import"],
   rules: {
     "import/order": [
       "warn",
@@ -25,16 +24,6 @@ module.exports = {
       },
     ],
     "prettier/prettier": "warn",
-    "react/jsx-key": "error",
-    "react/jsx-no-useless-fragment": ["warn", { allowExpressions: true }],
-    "react/jsx-sort-props": [
-      "warn",
-      {
-        callbacksLast: true,
-        reservedFirst: ["key", "dangerouslySetInnerHTML", "ref"],
-      },
-    ],
-    "react/self-closing-comp": "warn",
     "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
     "@typescript-eslint/consistent-type-imports": "warn",
     "@typescript-eslint/explicit-function-return-type": [
