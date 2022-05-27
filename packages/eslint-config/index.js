@@ -8,6 +8,7 @@ module.exports = {
   ],
   plugins: ["import"],
   rules: {
+    "import/no-duplicates": "warn",
     "import/order": [
       "warn",
       {
@@ -24,7 +25,6 @@ module.exports = {
       },
     ],
     "prettier/prettier": "warn",
-    "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
     "@typescript-eslint/consistent-type-imports": "warn",
     "@typescript-eslint/explicit-function-return-type": [
       "warn",
