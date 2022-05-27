@@ -11,6 +11,7 @@ module.exports = {
     "react"
   ],
   rules: {
+    ...base.rules,
     "react/button-has-type": "warn",
     "react/jsx-key": "error",
     "react/jsx-no-useless-fragment": ["warn", { allowExpressions: true }],
