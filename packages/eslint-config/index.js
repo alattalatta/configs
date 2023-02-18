@@ -1,142 +1,162 @@
 module.exports = {
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    "plugin:prettier/recommended",
+    'plugin:prettier/recommended',
   ],
-  plugins: ["import"],
+  plugins: ['import'],
   rules: {
-    "import/no-duplicates": "warn",
-    "import/order": [
-      "warn",
+    'import/no-duplicates': 'warn',
+    'import/order': [
+      'warn',
       {
         alphabetize: {
-          order: "asc",
+          order: 'asc',
         },
-        "newlines-between": "always",
-        groups: [
-          "builtin",
-          "external",
-          "internal",
-          ["sibling", "parent", "index"],
-        ],
+        'newlines-between': 'always',
+        groups: ['builtin', 'external', 'internal', ['sibling', 'parent', 'index']],
       },
     ],
-    "prettier/prettier": "warn",
-    "@typescript-eslint/consistent-type-imports": "warn",
-    "@typescript-eslint/explicit-function-return-type": [
-      "warn",
-      {
-        allowExpressions: true,
-        allowConciseArrowFunctionExpressionsStartingWithVoid: true,
-      },
-    ],
-    "@typescript-eslint/member-ordering": [
-      "warn",
+    'prettier/prettier': 'warn',
+    '@typescript-eslint/consistent-type-exports': 'warn',
+    '@typescript-eslint/consistent-type-imports': 'warn',
+    '@typescript-eslint/explicit-module-boundary-types': 'warn',
+    '@typescript-eslint/member-ordering': [
+      'warn',
       {
         default: {
           memberTypes: [
-            "signature",
+            // Index signature
+            'signature',
+            'call-signature',
 
             // Fields
-            "public-static-field",
-            "protected-static-field",
-            "private-static-field",
+            'public-static-field',
+            'protected-static-field',
+            'private-static-field',
+            '#private-static-field',
 
-            "public-instance-field",
-            "protected-instance-field",
-            "private-instance-field",
+            'public-instance-field',
+            'protected-instance-field',
+            'private-instance-field',
+            '#private-instance-field',
 
-            "public-abstract-field",
-            "protected-abstract-field",
-            "private-abstract-field",
+            'public-abstract-field',
+            'protected-abstract-field',
 
-            "field",
+            'public-field',
+            'protected-field',
+            'private-field',
+            '#private-field',
+
+            'static-field',
+            'instance-field',
+            'abstract-field',
+
+            'field',
 
             // Getters
-            "public-static-get",
-            "protected-static-get",
-            "private-static-get",
+            'public-static-get',
+            'protected-static-get',
+            'private-static-get',
+            '#private-static-get',
 
-            "public-decorated-get",
-            "protected-decorated-get",
-            "private-decorated-get",
+            'public-instance-get',
+            'protected-instance-get',
+            'private-instance-get',
+            '#private-instance-get',
 
-            "public-instance-get",
-            "protected-instance-get",
-            "private-instance-get",
+            'public-abstract-get',
+            'protected-abstract-get',
 
-            "public-abstract-get",
-            "protected-abstract-get",
-            "private-abstract-get",
+            'public-get',
+            'protected-get',
+            'private-get',
+            '#private-get',
 
-            "get",
+            'static-get',
+            'instance-get',
+            'abstract-get',
+
+            'get',
 
             // Setters
-            "public-static-set",
-            "protected-static-set",
-            "private-static-set",
+            'public-static-set',
+            'protected-static-set',
+            'private-static-set',
+            '#private-static-set',
 
-            "public-decorated-set",
-            "protected-decorated-set",
-            "private-decorated-set",
+            'public-instance-set',
+            'protected-instance-set',
+            'private-instance-set',
+            '#private-instance-set',
 
-            "public-instance-set",
-            "protected-instance-set",
-            "private-instance-set",
+            'public-abstract-set',
+            'protected-abstract-set',
 
-            "public-abstract-set",
-            "protected-abstract-set",
-            "private-abstract-set",
+            'public-set',
+            'protected-set',
+            'private-set',
+            '#private-set',
 
-            "set",
+            'static-set',
+            'instance-set',
+            'abstract-set',
+
+            'set',
+
+            // Static initialization
+            'static-initialization',
 
             // Constructors
-            "public-constructor",
-            "protected-constructor",
-            "private-constructor",
+            'public-constructor',
+            'protected-constructor',
+            'private-constructor',
 
-            "constructor",
+            'constructor',
 
             // Methods
-            "public-static-method",
-            "protected-static-method",
-            "private-static-method",
+            'public-static-method',
+            'protected-static-method',
+            'private-static-method',
+            '#private-static-method',
 
-            "public-decorated-method",
-            "protected-decorated-method",
-            "private-decorated-method",
+            'public-instance-method',
+            'protected-instance-method',
+            'private-instance-method',
+            '#private-instance-method',
 
-            "public-instance-method",
-            "protected-instance-method",
-            "private-instance-method",
+            'public-abstract-method',
+            'protected-abstract-method',
 
-            "public-abstract-method",
-            "protected-abstract-method",
-            "private-abstract-method",
+            'public-method',
+            'protected-method',
+            'private-method',
+            '#private-method',
 
-            "method",
+            'static-method',
+            'instance-method',
+            'abstract-method',
+
+            'method',
           ],
-          order: "alphabetically",
+          order: 'alphabetically',
         },
         typeLiterals: {
-          memberTypes: ["signature", "field", "constructor", "method"],
-          order: "alphabetically",
+          memberTypes: ['signature', 'field', 'constructor', 'method'],
+          order: 'alphabetically',
         },
       },
     ],
-    "@typescript-eslint/method-signature-style": "warn",
-    "@typescript-eslint/no-shadow": "error",
-    "@typescript-eslint/no-unused-vars": [
-      "warn",
-      { argsIgnorePattern: "^_+", ignoreRestSiblings: true },
-    ]
+    '@typescript-eslint/method-signature-style': 'warn',
+    '@typescript-eslint/no-shadow': 'error',
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_+', ignoreRestSiblings: true }],
   },
-  "settings": {
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
-    }
-  }
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+  },
 }
