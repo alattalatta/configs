@@ -8,6 +8,7 @@ module.exports = {
     ...base.rules,
     'react/button-has-type': 'error',
     'react/jsx-key': 'error',
+    'react/jsx-no-comment-textnodes': 'error',
     'react/jsx-no-useless-fragment': ['warn', { allowExpressions: true }],
     'react/jsx-sort-props': [
       'warn',

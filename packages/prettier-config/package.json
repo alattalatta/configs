@@ -5,7 +5,7 @@
   "main": "index.json",
   "license": "MIT",
   "devDependencies": {
-    "prettier": "^3.0.0"
+    "prettier": "^3.2.1"
   },
   "peerDependencies": {
     "prettier": "3"
