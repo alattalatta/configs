@@ -3,11 +3,13 @@
   "description": "Linter/Prettier configs",
   "main": "index.js",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "scripts": {
+    "pack:all": "pnpm pack:eslint && pnpm pack:prettier",
+    "pack:eslint": "cd packages/eslint-config && pnpm pack --pack-destination ../..",
+    "pack:prettier": "cd packages/prettier-config && pnpm pack --pack-destination ../.."
+  },
   "packageManager": "pnpm@9.8.0",
   "dependencies": {
-    "@changesets/cli": "^2.27.1"
+    "@changesets/cli": "^2.27.7"
   }
 }
