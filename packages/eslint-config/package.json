@@ -1,6 +1,6 @@
 {
   "name": "@alattalatta/eslint-config",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "A simple ESLint preset.",
   "main": "index.js",
   "license": "MIT",

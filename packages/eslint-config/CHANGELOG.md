@@ -1,5 +1,11 @@
 # @alattalatta/eslint-config
 
+## 2.2.0
+
+### Minor Changes
+
+- a0e4809: Upgrade dependencies
+
 ## 2.1.0
 
 ### Minor Changes
