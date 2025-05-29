@@ -1,5 +1,11 @@
 # @alattalatta/eslint-config
 
+## 3.0.0
+
+### Major Changes
+
+- 099e5c4: Upgrade ESLint to 9
+
 ## 2.2.0
 
 ### Minor Changes

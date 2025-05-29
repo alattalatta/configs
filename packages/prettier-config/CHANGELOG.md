@@ -1,5 +1,11 @@
 # @alattalatta/prettier-config
 
+## 2.3.0
+
+### Minor Changes
+
+- 099e5c4: Upgrade dependencies
+
 ## 2.2.0
 
 ### Minor Changes
