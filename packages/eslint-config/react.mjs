@@ -1,11 +1,14 @@
-const base = require('.')
+import react from 'eslint-plugin-react'
+import reactHooks from 'eslint-plugin-react-hooks'
+import tselint from 'typescript-eslint'
 
-module.exports = {
-  ...base,
-  extends: [...base.extends, 'plugin:react-hooks/recommended'],
-  plugins: [...base.plugins, 'react'],
+import base from './index.mjs'
+
+export default tselint.config(base, reactHooks.configs['recommended-latest'], {
+  plugins: {
+    react,
+  },
   rules: {
-    ...base.rules,
     'react/button-has-type': 'error',
     'react/jsx-key': 'error',
     'react/jsx-no-comment-textnodes': 'error',
@@ -19,4 +22,4 @@ module.exports = {
     ],
     'react/self-closing-comp': 'warn',
   },
-}
+})

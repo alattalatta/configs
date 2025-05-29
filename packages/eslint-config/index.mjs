@@ -1,20 +1,15 @@
-module.exports = {
-  parser: '@typescript-eslint/parser',
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended-type-checked', 'plugin:prettier/recommended'],
-  plugins: ['import'],
+import tselint from 'typescript-eslint'
+
+import js from './js.mjs'
+
+export default tselint.config(js, {
+  extends: [tselint.configs.recommendedTypeChecked],
+  languageOptions: {
+    ecmaVersion: 'latest',
+    parser: tselint.parser,
+    sourceType: 'module',
+  },
   rules: {
-    'import/no-duplicates': 'warn',
-    'import/order': [
-      'warn',
-      {
-        alphabetize: {
-          order: 'asc',
-        },
-        'newlines-between': 'always',
-        groups: ['builtin', 'external', 'internal', ['sibling', 'parent', 'index']],
-      },
-    ],
-    'prettier/prettier': 'warn',
     '@typescript-eslint/consistent-type-exports': 'warn',
     '@typescript-eslint/consistent-type-imports': 'warn',
     '@typescript-eslint/explicit-module-boundary-types': 'warn',
@@ -149,9 +144,4 @@ module.exports = {
     '@typescript-eslint/no-shadow': 'error',
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_+', ignoreRestSiblings: true }],
   },
-  settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
-    },
-  },
-}
+})
