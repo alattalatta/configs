@@ -1,0 +1,12 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "@alattalatta/eslint-config": "2.2.0",
+    "@alattalatta/prettier-config": "2.2.0"
+  },
+  "changesets": [
+    "bitter-wolves-sink",
+    "kind-yaks-boil"
+  ]
+}

@@ -1,5 +1,11 @@
 # @alattalatta/eslint-config
 
+## 3.0.0-beta.0
+
+### Major Changes
+
+- Upgrade ESLint to 9, bump others
+
 ## 2.2.0
 
 ### Minor Changes
