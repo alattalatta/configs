@@ -1,5 +1,12 @@
 # @alattalatta/eslint-config
 
+## 3.0.0
+
+### Major Changes
+
+- 094f40e: Upgrade ESLint to 9, bump others
+- 606a6bf: Replace various with perfectionist
+
 ## 3.0.0-beta.0
 
 ### Major Changes
