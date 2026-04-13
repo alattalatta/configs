@@ -15,8 +15,8 @@
   "devDependencies": {
     "@alattalatta/eslint-config": "workspace:^",
     "@alattalatta/prettier-config": "workspace:^",
-    "eslint": "^9.27.0",
-    "prettier": "^3.5.3"
+    "eslint": "^9.39.4",
+    "prettier": "^3.8.2"
   },
   "prettier": "@alattalatta/prettier-config"
 }

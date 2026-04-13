@@ -13,11 +13,20 @@ export default tselint.config(base, reactHooks.configs['recommended-latest'], {
     'react/jsx-key': 'error',
     'react/jsx-no-comment-textnodes': 'error',
     'react/jsx-no-useless-fragment': ['warn', { allowExpressions: true }],
-    'react/jsx-sort-props': [
+    'perfectionist/sort-jsx-props': [
       'warn',
       {
-        callbacksLast: true,
-        reservedFirst: ['key', 'dangerouslySetInnerHTML', 'ref'],
+        customGroups: [
+          {
+            groupName: 'reserved',
+            anyOf: [
+              { elementNamePattern: 'key' },
+              { elementNamePattern: 'dangerouslySetInnerHTML' },
+              { elementNamePattern: 'ref' },
+            ],
+          },
+        ],
+        groups: ['reserved', 'unknown'],
       },
     ],
     'react/self-closing-comp': 'warn',

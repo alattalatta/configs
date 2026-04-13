@@ -1,5 +1,5 @@
 import eslint from '@eslint/js'
-import importX from 'eslint-plugin-import-x'
+import perfectionist from 'eslint-plugin-perfectionist'
 import prettier from 'eslint-plugin-prettier/recommended'
 import tselint from 'typescript-eslint'
 
@@ -11,18 +11,35 @@ export default tselint.config(
       sourceType: 'module',
     },
     plugins: {
-      import: importX,
+      perfectionist,
     },
     rules: {
-      'import/no-duplicates': 'warn',
-      'import/order': [
+      'perfectionist/sort-imports': [
         'warn',
         {
-          alphabetize: {
-            order: 'asc',
-          },
-          'newlines-between': 'always',
+          newlinesBetween: 1,
           groups: ['builtin', 'external', 'internal', ['sibling', 'parent', 'index']],
+        },
+      ],
+      'perfectionist/sort-named-imports': 'warn',
+      'perfectionist/sort-named-exports': 'warn',
+      'perfectionist/sort-exports': 'warn',
+      'perfectionist/sort-classes': [
+        'warn',
+        {
+          groups: [
+            'index-signature',
+            ['property', 'accessor-property', 'function-property'],
+            'static-block',
+            'constructor',
+            ['get-method', 'set-method', 'method'],
+          ],
+        },
+      ],
+      'perfectionist/sort-object-types': [
+        'warn',
+        {
+          groups: ['index-signature', 'property', 'method'],
         },
       ],
       'no-undef': 'off',

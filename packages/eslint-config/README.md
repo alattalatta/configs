@@ -3,21 +3,49 @@
 ## Usage
 
 ```js
-// .eslintrc.js
-require('@alattalatta/eslint-config/patch')
+// eslint.config.mjs
+import { defineConfig } from 'eslint/config'
+import preset from '@alattalatta/eslint-config'
 
-module.exports = {
-  extends: ['@alattalatta/eslint-config'], // ['@alattalatta/eslint-config/react']
-  parserOptions: {
-    project: './tsconfig.json',
-    tsconfigRootDir: __dirname,
-  },
-  settings: {
-    'import/resolver': {
-      typescript: {
-        project: './tsconfig.json',
-      },
+export default defineConfig(preset, {
+  languageOptions: {
+    parserOptions: {
+      projectService: true,
+      tsconfigRootDir: import.meta.dirname,
     },
   },
-}
+})
+```
+
+## Presets
+
+- `@alattalatta/eslint-config` - TypeScript preset
+- `@alattalatta/eslint-config/js` - JavaScript preset
+- `@alattalatta/eslint-config/react` - React + TypeScript preset
+
+### JavaScript
+
+```js
+// eslint.config.mjs
+import { defineConfig } from 'eslint/config'
+import preset from '@alattalatta/eslint-config/js'
+
+export default defineConfig(preset)
+```
+
+### React
+
+```js
+// eslint.config.mjs
+import { defineConfig } from 'eslint/config'
+import preset from '@alattalatta/eslint-config/react'
+
+export default defineConfig(preset, {
+  languageOptions: {
+    parserOptions: {
+      projectService: true,
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
